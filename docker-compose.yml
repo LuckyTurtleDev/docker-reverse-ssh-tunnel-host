@@ -1,0 +1,10 @@
+version: '3.3'
+services:
+  ssh-tunneling:
+    build: .
+    container_name: ssh-tunneling
+    volumes:
+      - './etc_ssh:/etc/ssh/'
+      - './home_ssh:/home/user/.ssh/'
+    ports:
+      - '2222:2222'
