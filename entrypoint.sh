@@ -25,6 +25,7 @@ sed -i "s/^#*PubkeyAuthentication.*/PubkeyAuthentication yes/g" ~/sshd_config.te
 sed -i "s/^#*PasswordAuthentication.*/PasswordAuthentication no/g" ~/sshd_config.temp
 sed -i "s/^#*PermitRootLogin.*/PermitRootLogin no/g" ~/sshd_config.temp
 sed -i "s/^#*GatewayPorts.*/GatewayPorts yes/g" ~/sshd_config.temp
+sed -i "s/^#*AllowTcpForwarding.*/AllowTcpForwarding yes/g" ~/sshd_config.temp
 sed -i "s/^#*Port.*/Port 2222/g" ~/sshd_config.temp
 # if file mounted in docker, `mv` ist not allowed
 cat ~/sshd_config.temp > /etc/ssh/sshd_config;
